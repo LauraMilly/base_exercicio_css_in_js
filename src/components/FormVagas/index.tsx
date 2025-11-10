@@ -1,10 +1,47 @@
 import { FormEvent, useState } from 'react'
-
-import styles from './FormVagas.module.css'
+import styled from 'styled-components'
 
 type Props = {
   aoPesquisar: (termo: string) => void
 }
+
+const corPrincipal = '#4a47a3'
+const corSecundaria = '#f2f2f2'
+
+const Form = styled.form`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  background-color: ${corSecundaria};
+  padding: 32px;
+  border-radius: 12px;
+  margin-top: 40px;
+`
+
+const Campo = styled.input`
+  padding: 0 16px;
+  outline-color: ${corPrincipal};
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 40px;
+  font-size: 1rem;
+`
+
+const BotaoPesquisar = styled.button`
+  background-color: ${corPrincipal};
+  border: 1px solid ${corPrincipal};
+  height: 40px;
+  padding: 0 16px;
+  font-size: 18px;
+  color: ${corSecundaria};
+  margin-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background-color: #262370ff;
+  }
+`
 
 const FormVagas = ({ aoPesquisar }: Props) => {
   const [termo, setTermo] = useState<string>('')
@@ -15,17 +52,15 @@ const FormVagas = ({ aoPesquisar }: Props) => {
   }
 
   return (
-    <form className={styles.form} onSubmit={aoEnviarForm}>
-      <input
-        className={styles.campo}
+    <Form onSubmit={aoEnviarForm}>
+      <Campo
         placeholder="Front-end, fullstack, node, design"
         onChange={(e) => setTermo(e.target.value)}
         type="search"
       />
-      <button className={styles.btnPesquisar} type="submit">
-        Pesquisar
-      </button>
-    </form>
+      <BotaoPesquisar type="submit">Pesquisar</BotaoPesquisar>
+    </Form>
   )
 }
+
 export default FormVagas
