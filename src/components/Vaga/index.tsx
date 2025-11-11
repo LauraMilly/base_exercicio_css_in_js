@@ -11,7 +11,7 @@ type Props = {
 }
 
 const corPrincipal = '#4a47a3'
-const corSecundaria = '#f2f2f2'
+const corSecundaria = '#f9f5e7'
 
 const VagaItem = styled.li`
   border: 1px solid ${corPrincipal};
