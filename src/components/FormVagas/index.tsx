@@ -39,7 +39,7 @@ const BotaoPesquisar = styled.button`
   transition: background 0.2s ease;
 
   &:hover {
-    background-color: #262370ff;
+    background-color: #a7727d;
   }
 `
 
