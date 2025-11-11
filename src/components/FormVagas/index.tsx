@@ -5,8 +5,8 @@ type Props = {
   aoPesquisar: (termo: string) => void
 }
 
-const corPrincipal = '#4a47a3'
-const corSecundaria = '#f2f2f2'
+const corPrincipal = '#a7727d'
+const corSecundaria = '#f9f5e7'
 
 const Form = styled.form`
   display: grid;
