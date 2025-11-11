@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const corPrincipal = '#4a47a3'
+const corPrincipal = '#a7727d'
 const HeroSection = styled.section`
   height: 360px;
   width: 100%;
