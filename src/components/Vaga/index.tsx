@@ -10,7 +10,7 @@ type Props = {
   requisitos: string[]
 }
 
-const corPrincipal = '#4a47a3'
+const corPrincipal = '#a7727d'
 const corSecundaria = '#f9f5e7'
 
 const VagaItem = styled.li`
